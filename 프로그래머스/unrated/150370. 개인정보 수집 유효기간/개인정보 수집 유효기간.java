@@ -8,15 +8,15 @@ class Solution {
 
         // terms
         for (String term : terms) {
-            String[] splitTerm = term.split(" ");
-            map.put(splitTerm[0], Integer.parseInt(splitTerm[1]));
+            map.put(term.split(" ")[0], Integer.parseInt(term.split(" ")[1]));
         }
 
         // privacies
         for (int i = 0; i < privacies.length; i++) {
-            String[] privacy = privacies[i].split(" ");
-
-            if (days >= getDay(privacy[0]) + map.get(privacy[1]) * 28) {
+            int day = getDay(privacies[i].split(" ")[0]);
+            int privacy = day + (map.get(privacies[i].split(" ")[1]) * 28);
+            
+            if (days >= privacy) {
                 answer.add(i + 1);
             }
         }
