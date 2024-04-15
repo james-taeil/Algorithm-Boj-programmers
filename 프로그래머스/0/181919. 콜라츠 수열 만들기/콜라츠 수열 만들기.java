@@ -6,12 +6,9 @@ class Solution {
         List<Integer> answer = new ArrayList<>();
         
         // 연산
-        // if (n % 2 == 0) {
-        //     answer.add(n);
-        // }
-        
         answer.add(n);
         
+
         while (n != 1) {
             
             if (n % 2 == 0) {
