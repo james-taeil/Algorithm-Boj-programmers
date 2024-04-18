@@ -1,9 +1,11 @@
 class Solution {
     public String solution(String my_string, int[] index_list) {
         String answer = "";
-                
+        
+        String[] strArr = my_string.split("");
+        
         for (int i = 0; i < index_list.length; i++) {
-            answer += my_string.charAt(index_list[i]);
+            answer += strArr[index_list[i]];
         }
         
         return answer;
