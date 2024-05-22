@@ -1,0 +1,14 @@
+class Solution {
+    public int[] solution(int start, int end_num) {
+        int len = start - end_num;
+        int[] answer = new int[len + 1];
+        int idx = 0;
+        
+        for (int i = start; i >= end_num; i--) {
+            answer[idx] = i;
+            idx++;
+        }
+        
+        return answer;
+    }
+}
