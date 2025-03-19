@@ -27,13 +27,14 @@ class Solution {
                     continue;
                 }
 
-                if (matrix[i][j] > matrix[j][i] || (matrix[i][j] == matrix[j][i] && giftDegree[i] > giftDegree[j])) {
+                if (matrix[i][j] > matrix[j][i]) {
+                    num++;
+                }
+                else if (matrix[i][j] == matrix[j][i] && giftDegree[i] > giftDegree[j]) {
                     num++;
                 }
             }
-            if (answer < num) {
-                answer = num;
-            }
+            answer = Math.max(answer, num);
         }
 
         return answer;
